@@ -1,6 +1,3 @@
-import java.io.BufferedWriter;
-import java.io.IOException;
-
 public class Task19 {
     static class SinglyLinkedListNode {
         public int data;
@@ -18,33 +15,15 @@ public class Task19 {
         public SinglyLinkedList() {
             this.head = null;
         }
-
-
     }
 
-    public static void printSinglyLinkedList(SinglyLinkedListNode node, String sep, BufferedWriter bufferedWriter) throws IOException {
+    public static void printSinglyLinkedList(SinglyLinkedListNode node) {
         while (node != null) {
-            bufferedWriter.write(String.valueOf(node.data));
-
+            System.out.print(node.data + " ");
             node = node.next;
-
-            if (node != null) {
-                bufferedWriter.write(sep);
-            }
         }
     }
 
-    // Complete the insertNodeAtTail function below.
-
-    /*
-     * For your reference:
-     *
-     * SinglyLinkedListNode {
-     *     int data;
-     *     SinglyLinkedListNode next;
-     * }
-     *
-     */
     static SinglyLinkedListNode insertNodeAtTail(SinglyLinkedListNode head, int data) {
         SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
 
@@ -59,18 +38,17 @@ public class Task19 {
 
         current.next = newNode;
         return head;
-
     }
 
     public static void main(String[] args) {
         SinglyLinkedList linkedList = new SinglyLinkedList();
 
-        insertNodeAtTail(linkedList.head, 141);
-        insertNodeAtTail(linkedList.head, 302);
-        insertNodeAtTail(linkedList.head, 164);
-        insertNodeAtTail(linkedList.head, 530);
-        insertNodeAtTail(linkedList.head, 474);
+        linkedList.head = insertNodeAtTail(linkedList.head, 141);
+        linkedList.head = insertNodeAtTail(linkedList.head, 302);
+        linkedList.head = insertNodeAtTail(linkedList.head, 164);
+        linkedList.head = insertNodeAtTail(linkedList.head, 530);
+        linkedList.head = insertNodeAtTail(linkedList.head, 474);
 
-//        printSinglyLinkedList(linkedList.head);
+        printSinglyLinkedList(linkedList.head);
     }
 }
