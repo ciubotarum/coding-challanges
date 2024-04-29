@@ -108,18 +108,43 @@ public class StringExercises {
         if (str.length() < 3) {
             return false;
         }
-        if (str.substring(1,3).equals("ix")) {
+        if (str.substring(1, 3).equals("ix")) {
             return true;
         }
         return false;
     }
 
 
-
+    //    Given a string, return a string made of the first 2 chars (if present), however include first char only if it is 'o' and include the second only if it is 'z', so "ozymandias" yields "oz".
+//
+//    startOz("ozymandias") → "oz"
+//    startOz("bzoo") → "z"
+//    startOz("oxx") → "o"
+    public static String startOz(String str) {
+        char o = 'o';
+        char z = 'z';
+        if (str.length() < 2) {
+            if (str.equals("o")) {
+                return "o";
+            } else {
+                return "";
+            }
+        }
+        if (str.charAt(0) == o && str.charAt(1) == z) {
+            return "oz";
+        }
+        if (str.charAt(0) == o && str.charAt(1) != z) {
+            return "o";
+        }
+        if (str.charAt(0) != o && str.charAt(1) == z) {
+            return "z";
+        }
+        return "";
+    }
 
     public static void main(String[] args) {
 
-        String str = "adelHello";
+        String str = "";
         int n = 10;
 
         // Front Bach
@@ -137,6 +162,8 @@ public class StringExercises {
         // Deleting del starting at index 2
 //        System.out.println(delDel(str));
         // String begins with "mix"
-        System.out.println(mixStart(str));
+//        System.out.println(mixStart(str));
+        // Print first two letter only if first is o and the second is z
+        System.out.println(startOz(str));
     }
 }
