@@ -65,14 +65,63 @@ public class StringExercises {
         if (str.length() == 1) {
             return str + str + str;
         }
-        return str.substring(0,2) + str.substring(0, str.length()) + str.substring(0,2);
+        return str.substring(0, 2) + str.substring(0, str.length()) + str.substring(0, 2);
     }
+
+    //    Given a string, return true if the string starts with "hi" and false otherwise.
+//
+//
+//            startHi("hi there") → true
+//    startHi("hi") → true
+//    startHi("hello hi") → false
+    public static boolean startHi(String str) {
+        if (str.startsWith("hi")) {
+            return true;
+        }
+        return false;
+    }
+
+
+    //    Given a string, if the string "del" appears starting at index 1, return a string where that "del" has been deleted. Otherwise, return the string unchanged.
+//
+//
+//            delDel("adelbc") → "abc"
+//    delDel("adelHello") → "aHello"
+//    delDel("adedbc") → "adedbc"
+    public static String delDel(String str) {
+        if (str.length() < 4) {
+            return str;
+        }
+        if (str.substring(1, 4).equals("del")) {
+            return str.charAt(0) + str.substring(4);
+        }
+        return str;
+    }
+
+
+    //    Return true if the given string begins with "mix", except the 'm' can be anything, so "pix", "9ix" .. all count.
+//
+//    mixStart("mix snacks") → true
+//    mixStart("pix snacks") → true
+//    mixStart("piz snacks") → false
+    public static boolean mixStart(String str) {
+        if (str.length() < 3) {
+            return false;
+        }
+        if (str.substring(1,3).equals("ix")) {
+            return true;
+        }
+        return false;
+    }
+
+
 
 
     public static void main(String[] args) {
 
-        String str = "a";
+        String str = "adelHello";
         int n = 10;
+
         // Front Bach
 //        System.out.println(frontBack(str));
         // Front 3
@@ -82,6 +131,12 @@ public class StringExercises {
         // Multiple of 3 and 5
 //        System.out.println(or35(n));
         // Front 2 numbers
-        System.out.println(front22(str));
+//        System.out.println(front22(str));
+        // Start String with HI
+//        System.out.println(startHi(str));
+        // Deleting del starting at index 2
+//        System.out.println(delDel(str));
+        // String begins with "mix"
+        System.out.println(mixStart(str));
     }
 }
