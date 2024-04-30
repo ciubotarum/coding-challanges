@@ -1,3 +1,7 @@
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class StringExercises {
     //    Given a string, return a new string where the first and last chars have been exchanged.
 //
@@ -142,9 +146,30 @@ public class StringExercises {
         return "";
     }
 
+    //    Return true if the given string contains between 1 and 3 'e' chars.
+//
+//    stringE("Hello") → true
+//    stringE("Heelle") → true
+//    stringE("Heelele") → false
+    public static boolean stringE(String str) {
+        int number = 0;
+
+        for (char element : str.toCharArray()) {
+            if (element == 'e') {
+                number++;
+            }
+        }
+        if (number >= 1 && number <= 3) {
+            return true;
+        }
+
+        return false;
+
+    }
+
     public static void main(String[] args) {
 
-        String str = "";
+        String str = "Hello";
         int n = 10;
 
         // Front Bach
@@ -164,6 +189,8 @@ public class StringExercises {
         // String begins with "mix"
 //        System.out.println(mixStart(str));
         // Print first two letter only if first is o and the second is z
-        System.out.println(startOz(str));
+//        System.out.println(startOz(str));
+        // String contains till 3 "e" chars
+        System.out.println(stringE(str));
     }
 }
