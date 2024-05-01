@@ -122,7 +122,7 @@ public class IfStatements {
 //    max1020(19, 11) → 19
 //    max1020(11, 9) → 11
     public static int max1020(int a, int b) {
-        List<Integer> filtered = Stream.of(a,b)
+        List<Integer> filtered = Stream.of(a, b)
                 .filter(element -> element >= 10 && element <= 20)
                 .collect(Collectors.toList());
 
@@ -144,11 +144,24 @@ public class IfStatements {
 
     }
 
+    //    Given two non-negative int values, return true if they have the same last digit, such as with 27 and 57. Note that the % "mod" operator computes remainders, so 17 % 10 is 7.
+//
+//    lastDigit(7, 17) → true
+//    lastDigit(6, 17) → false
+//    lastDigit(3, 113) → true
+    public static boolean lastDigit(int a, int b) {
+        if (a % 10 == b % 10) {
+            return true;
+        }
+
+        return false;
+    }
+
     public static void main(String[] args) {
         int temp1 = 120;
         int temp2 = -1;
         int a = 17;
-        int b = 16;
+        int b = 117;
         int c = 10;
 
         // Temperature high and low
@@ -166,6 +179,8 @@ public class IfStatements {
         // numbers in range [30,40] or [40,50]
 //        System.out.println(in3050(a, b));
         // larger value in range [10,20]
-        System.out.println(max1020(a, b));
+//        System.out.println(max1020(a, b));
+        // Last digit
+        System.out.println(lastDigit(a, b));
     }
 }

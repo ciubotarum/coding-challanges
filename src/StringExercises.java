@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -167,10 +169,47 @@ public class StringExercises {
 
     }
 
+    //    Given a string, return a new string where the last 3 chars are now in upper case. If the string has less than 3 chars, uppercase whatever is there. Note that str.toUpperCase() returns the uppercase version of a string.
+//
+//            endUp("Hello") → "HeLLO"
+//    endUp("hi there") → "hi thERE"
+//    endUp("hi") → "HI"
+    public static String endUp(String str) {
+        int length = str.length();
+
+        if (length < 4) {
+            return str.toUpperCase();
+        } else {
+            String end = str.substring(length - 3, length).toUpperCase();
+            return str.substring(0, length - 3) + end;
+        }
+
+    }
+
+
+    //    Given a non-empty string and an int N, return the string made starting with char 0, and then every Nth char of the string. So if N is 3, use char 0, 3, 6, ... and so on. N is 1 or more.
+//
+//    everyNth("Miracle", 2) → "Mrce"
+//    everyNth("abcdefg", 2) → "aceg"
+//    everyNth("abcdefg", 3) → "adg"
+    public static String everyNth(String str, int n) {
+        String[] arr = str.split("");
+        StringBuilder newString = new StringBuilder();
+
+        for (int i = 0; i < arr.length; i++) {
+            if (i % n == 0) {
+                System.out.println(arr[i]);
+                newString.append(arr[i]);
+            }
+        }
+
+        return newString.toString();
+    }
+
     public static void main(String[] args) {
 
-        String str = "Hello";
-        int n = 10;
+        String str = "abcdefg";
+        int n = 3;
 
         // Front Bach
 //        System.out.println(frontBack(str));
@@ -191,6 +230,10 @@ public class StringExercises {
         // Print first two letter only if first is o and the second is z
 //        System.out.println(startOz(str));
         // String contains till 3 "e" chars
-        System.out.println(stringE(str));
+//        System.out.println(stringE(str));
+        // Last 3 characters to uppercase
+//        System.out.println(endUp(str));
+        // every N-th
+        System.out.println(everyNth(str, n));
     }
 }
