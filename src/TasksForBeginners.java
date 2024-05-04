@@ -1,7 +1,6 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.lang.reflect.Array;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class TasksForBeginners {
 
@@ -117,16 +116,86 @@ public class TasksForBeginners {
 //        return Integer.parseInt(sortedStr);
     }
 
+    //    Your task is to sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result.
+//
+//    Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
+//
+//    If the input string is empty, return an empty string. The words in the input String will only contain valid consecutive numbers.
+//    "is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
+//            "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
+//            ""  -->  ""
+    public static String order(String phrase) {
+        if (phrase.isEmpty()) {
+            return "";
+        }
+
+        String[] words = phrase.split(" ");
+
+//        System.out.println(Arrays.asList(words));
+
+        List<String> processedList = new ArrayList<>();
+        Map<String,String> processingMap = new HashMap<>();
+        for (String word : words) {
+//            System.out.println(processString(word));
+            String processed = processString(word);
+            processedList.add(processed);
+
+            processingMap.put(processed, word);
+        }
+
+        System.out.println(processedList);
+
+        processedList = processedList.stream().sorted().collect(Collectors.toList());
+//        System.out.println(processedList);
+//
+//        System.out.println(processingMap);
+
+        List<String> result = new ArrayList<>();
+        for (String processed : processedList) {
+            String oldValue = processingMap.get(processed);
+            result.add(oldValue);
+        }
+
+//        System.out.println(result);
+
+//        String key = "2is";
+//        System.out.println("key="+key+";value="+processingMap.get(key));
+
+        return String.join(" ", result);
+    }
+
+    public static String processString(String word) {
+        String newString = "";
+        char[] charArray = word.toCharArray();
+        for (char c : charArray) {
+//            System.out.println(String.valueOf(c) + " " + String.valueOf(Character.isDigit(c)));
+            if (Character.isDigit(c)) {
+                newString = c + newString;
+            } else {
+                newString = newString + c;
+            }
+        }
+
+        return newString;
+    }
+    public static String getDigit(String words) {
+        return "";
+    }
+
     public static void main(String[] args) {
         String str = "This website is for losers LOL!";
-        String phrase = "";
+//        String phrase = "";
         int num = 1012;
+        String phrase = "is2 Thi1s T4est 3a";
 
         // Troll
 //        System.out.println(disemvowel(str));
         // Jaden Case
 //        System.out.println(toJadenCase(phrase));
         //
-        System.out.println(sortDesc(num));
+//        System.out.println(sortDesc(num));
+        //
+        System.out.println(order(phrase));
+
     }
 }
