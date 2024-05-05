@@ -125,6 +125,16 @@ public class TasksForBeginners {
 //            "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
 //            ""  -->  ""
     public static String order(String phrase) {
+//        String[] arr = words.split(" ");
+//        StringBuilder result = new StringBuilder("");
+//        for (int i = 0; i < 10; i++) {
+//            for (String s : arr) {
+//                if (s.contains(String.valueOf(i))) {
+//                    result.append(s + " ");
+//                }
+//            }
+//        }
+//        return result.toString().trim();
         if (phrase.isEmpty()) {
             return "";
         }
@@ -134,7 +144,7 @@ public class TasksForBeginners {
 //        System.out.println(Arrays.asList(words));
 
         List<String> processedList = new ArrayList<>();
-        Map<String,String> processingMap = new HashMap<>();
+        Map<String, String> processingMap = new HashMap<>();
         for (String word : words) {
 //            System.out.println(processString(word));
             String processed = processString(word);
@@ -178,8 +188,41 @@ public class TasksForBeginners {
 
         return newString;
     }
+
     public static String getDigit(String words) {
         return "";
+    }
+
+    //    You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even,
+//    return the middle 2 characters.
+//
+//#Examples:
+//
+//            Kata.getMiddle("test") should return "es"
+//
+//            Kata.getMiddle("testing") should return "t"
+//
+//            Kata.getMiddle("middle") should return "dd"
+//
+//            Kata.getMiddle("A") should return "A"
+//            #Input
+//
+//    A word (string) of length 0 < str < 1000 (In javascript you may get slightly more than 1000 in some test cases due to an error in the test cases). You do not need to test
+//    for this. This is only here to tell you that you do not need to worry about your solution timing out.
+//
+//#Output
+//
+//    The middle character(s) of the word represented as a string.
+    public static String getMiddle(String word) {
+        int length = word.length();
+        if (length % 2 == 0) {
+            char firsChar = word.charAt((length - 1) / 2);
+            char secondChar = word.charAt(length / 2);
+            String middle = String.valueOf(firsChar) + String.valueOf(secondChar);
+            return middle;
+        } else {
+            return word.charAt(length / 2) + "";
+        }
     }
 
     public static void main(String[] args) {
@@ -187,6 +230,7 @@ public class TasksForBeginners {
 //        String phrase = "";
         int num = 1012;
         String phrase = "is2 Thi1s T4est 3a";
+        String word = "test";
 
         // Troll
 //        System.out.println(disemvowel(str));
@@ -195,7 +239,9 @@ public class TasksForBeginners {
         //
 //        System.out.println(sortDesc(num));
         //
-        System.out.println(order(phrase));
+//        System.out.println(order(phrase));
+        //
+        System.out.println(getMiddle(word));
 
     }
 }
