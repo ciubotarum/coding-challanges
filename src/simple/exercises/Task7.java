@@ -1,3 +1,5 @@
+package simple.exercises;
+
 import java.io.*;
 
 import static java.util.stream.Collectors.joining;

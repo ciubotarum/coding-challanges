@@ -1,4 +1,6 @@
-    import java.util.Scanner;
+package simple.exercises;
+
+import java.util.Scanner;
 
     public class StdinExample {
         public static void main(String[] args) {

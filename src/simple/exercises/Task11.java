@@ -1,3 +1,5 @@
+package simple.exercises;
+
 public class Task11 {
     /*
      * Complete the 'theGreatXor' function below.

@@ -1,3 +1,5 @@
+package simple.exercises;
+
 import java.util.*;
 
 public class Task1 {
