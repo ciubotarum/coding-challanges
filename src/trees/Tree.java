@@ -1,4 +1,4 @@
-// Uncompleted
+package trees;// Uncompleted
 
 public class Tree {
     Node root;

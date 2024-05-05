@@ -1,3 +1,5 @@
+package linked.lists;
+
 public class Task18 {
     // Complete the printLinkedList function below.
     static class SinglyLinkedListNode {

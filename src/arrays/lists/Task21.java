@@ -1,3 +1,5 @@
+package arrays.lists;
+
 public class Task21 {
 
     static int findMaxProfit(int[] stockPrices) {

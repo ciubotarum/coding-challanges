@@ -1,3 +1,5 @@
+package linked.lists;
+
 public class Task19 {
     static class SinglyLinkedListNode {
         public int data;
