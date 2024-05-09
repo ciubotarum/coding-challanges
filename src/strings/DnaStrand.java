@@ -1,16 +1,12 @@
 package strings;
 
+import java.util.Arrays;
+
 public class DnaStrand  {
     public static String makeComplement(String dna) {
-//        String newDna = "";
-        StringBuilder newDna = new StringBuilder();
-        for (int i = 0; i < dna.length(); i++) {
-            if (dna.contains("A")) {
-                dna.replace("A", "T");
-            }
-        }
 
-        return dna;
+        return dna.replace("A", "t").replace("T", "A").replace("t", "T")
+                .replace("G", "c").replace("C", "G").replace("c", "C");
     }
     public static void main(String[] args) {
         String dna = "ATTGC";
