@@ -2,8 +2,15 @@ package arrays.lists;
 
 public class ArrayPlusArray {
     public static int arrayPlusArray(int[] arr1, int[] arr2) {
-//        for ()
-        return 0;
+        int sum1 = 0;
+        int sum2 = 0;
+        for (int i : arr1) {
+            sum1 += i;
+        }
+        for (int j : arr2) {
+            sum2 += j;
+        }
+        return sum1 + sum2;
     }
 
     public static void main(String[] args) {
