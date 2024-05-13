@@ -11,6 +11,8 @@ public class ArrayPlusArray {
             sum2 += j;
         }
         return sum1 + sum2;
+        // or just
+//        return IntStream.of(arr1).sum() + IntStream.of(arr2).sum();
     }
 
     public static void main(String[] args) {
