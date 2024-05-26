@@ -10,6 +10,10 @@ what do manifest file does
   * [JRE (_Java Runtime Environment_)](#jre-_java-runtime-environment_)
   * [JDK (_Java Development Kit_)](#jdk-_java-development-kit_)
     * [Components:](#components)
+  * [Variables](#variables)
+    * [Data types](#data-types)
+      * [<span style="color: green;">Primitive</span>](#span-stylecolor-greenprimitivespan)
+      * [<span style="color: green;">Non-Primitive (Reference Types)</span>](#span-stylecolor-greennon-primitive-reference-typesspan)
 <!-- TOC -->
 
 ## JVM (_Java Virtual Machine_)
@@ -59,5 +63,86 @@ Alternatives:
 Why/When use it:
 * write, compile, debug and package Java applications
 
+## Variables
 
+Definition:
+* containers that store data values
+
+### Data types
+
+#### <span style="color: green;">Primitive</span>
+
+Fundamental building blocks for storing basic values.
+
+Immutable: The value of a primitive variable cannot be changed after it's assigned. 
+If you modify a primitive variable, Java creates a new memory location for the new value.
+
+Store the actual data value directly in memory.
+
+* byte
+* short
+* int
+* long
+* float 
+* double
+* char
+* boolean
+
+#### <span style="color: green;">Non-Primitive (Reference Types)</span>
+
+Store memory addresses (references) pointing to objects in memory.
+
+* String
+* Arrays
+     * collection of elements of the same data type
+     * can't add or remove elements after creation
+     * declaring arrays: _int[] numbers = new int[5]_;
+     * hold only primitive data types
+* Classes
+     * fundamental building blocks for object-oriented programming
+     * templates that define the properties (variables) and behaviours (methods)
+     * you create objects (instances) from a class definition
+* Interfaces
+     * define what a class must do without specifying how to do it
+
+## JIT (_Just-in-time compilation_)
+
+Definition:
+* compiling the bytecode in runtime
+
+Why/When use it:
+* speed up program execution
+* compile the parts of the code that is actually used
+
+
+## ClassLoader
+
+Definition: 
+* crucial component of the JRE
+* loading classes at runtime into the JVM
+
+## Typecasting
+
+Definition:
+* converting a value from one data type to another
+
+Types:
+* Widening Casting (Implicit): automatic type conversion from a smaller to a larger type
+* Narrowing Casting (Explicit): needs explicit conversion to convert a larger type to a smaller type
+
+## Literals
+
+Definition:
+* fixed values that the program can use without any calculations
+     * whole numbers `10`
+     * numbers with decimal points `-12.25`
+     * characters `'`
+     * strings `"`
+     * boolean `true`
+
+## Constructor
+
+Definition:
+* initialization routine for your objects
+* put the initial parameters
 
