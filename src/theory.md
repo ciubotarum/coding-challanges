@@ -14,6 +14,14 @@ what do manifest file does
     * [Data types](#data-types)
       * [<span style="color: green;">Primitive</span>](#span-stylecolor-greenprimitivespan)
       * [<span style="color: green;">Non-Primitive (Reference Types)</span>](#span-stylecolor-greennon-primitive-reference-typesspan)
+  * [JIT (_Just-in-time compilation_)](#jit-_just-in-time-compilation_)
+  * [ClassLoader](#classloader)
+  * [Typecasting](#typecasting)
+  * [Literals](#literals)
+  * [Constructor](#constructor)
+  * [Overloading](#overloading)
+  * [Package](#package)
+  * [<span style="color: green;">Object-Oriented Programming (OOP)</span>](#span-stylecolor-greenobject-oriented-programming-oopspan)
 <!-- TOC -->
 
 ## JVM (_Java Virtual Machine_)
@@ -127,8 +135,8 @@ Definition:
 * converting a value from one data type to another
 
 Types:
-* Widening Casting (Implicit): automatic type conversion from a smaller to a larger type
-* Narrowing Casting (Explicit): needs explicit conversion to convert a larger type to a smaller type
+* **Widening Casting** (Implicit): automatic type conversion from a smaller to a larger type
+* **Narrowing Casting** (Explicit): needs explicit conversion to convert a larger type to a smaller type
 
 ## Literals
 
@@ -146,3 +154,47 @@ Definition:
 * initialization routine for your objects
 * put the initial parameters
 
+## Overloading
+
+Definition:
+* define multiple methods within the same class that have the same name 
+* have different parameters
+
+Why/When use it:
+* different functionalities for the same operation
+* code clarity
+
+## Package
+
+Definition:
+* organizing files (classes, interfaces, subpackages)
+
+Why/When use it:
+* code readability
+* prevent naming conflicts with the classes with the same name
+
+Types:
+* Built-in Packages (Java API) - pre-written classes, interfaces...
+* User-defined Packages - your own packages
+
+## <span style="color: green;">Object-Oriented Programming (OOP)</span>
+
+Definition:
+* paradigm focused on creating "objects"
+
+Key concepts:
+* Objects
+     * represents an entity in the real world (car, bank account)
+* Classes
+     * an object is an instance of a class
+* Inheritance
+     * allows to create new classes that inherit properties and methods from existing classes
+     * code re-usability 
+* Encapsulation
+
+* Polymorphism 
+     * object from different classes respond differently to the same method
+     * `drow()` method can be implemented differently for a `Circle` object and a `Square`
+
+* Abstraction
+     * hiding complex implementation and showing only the necessary features of an object
