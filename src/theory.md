@@ -191,7 +191,10 @@ Key concepts:
      * allows to create new classes that inherit properties and methods from existing classes
      * code re-usability 
 * Encapsulation
-
+     * all the variables are inside a method/class
+     * use getters and setters
+     * hide implementation from the outside world
+     * use access control `private` or `public`
 * Polymorphism 
      * object from different classes respond differently to the same method
      * `drow()` method can be implemented differently for a `Circle` object and a `Square`
