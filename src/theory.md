@@ -22,6 +22,8 @@ what do manifest file does
   * [Overloading](#overloading)
   * [Package](#package)
   * [<span style="color: green;">Object-Oriented Programming (OOP)</span>](#span-stylecolor-greenobject-oriented-programming-oopspan)
+  * [Access control](#access-control)
+  * [Interface](#interface-)
 <!-- TOC -->
 
 ## JVM (_Java Virtual Machine_)
@@ -210,9 +212,60 @@ Key concepts:
 
 * Abstraction
      * hiding complex implementation and showing only the necessary features of an object
+     * abstract classes are declared with `abstract`
+     * interfaces are declared using the `interface` keyword
 
 ## Access control
 
-* <span style="color: violet;">private</span>: not accessible directly in the subclass
-* <span style="color: violet;">protected</span>: accessible within the same package and by subclasses
-* <span style="color: violet;">public</span>: accessible from any other class
+* <span style="color: violet;">private</span>: not accessible from outside the class
+* <span style="color: violet;">protected</span>: accessible within the same package and by subclasses even if in different packages
+* <span style="color: violet;">public</span>: accessible from any other class/package
+* <span style="color: violet;">default</span>: not accessible from the outside packages
+
+## Interface 
+
+* reference type similar to a class 
+* specify abstract methods that a class must implement
+* is a way to achieve abstraction and inheritance
+* a class can implement multiple interfaces separated by a comma `,`
+* cannot have constructors
+
+### Abstract Methods
+
+* methods without a body 
+
+### Reference Type
+
+* type that refer to objects or arrays
+* hold the address to where the object in stored in memory
+* Types: 
+* 
+      * classes
+      * interfaces 
+      * arrays
+      * enumerations
+
+### Abstract classes
+
+* can contain abstract and concrete methods
+* can't create an instance (can't create an object) from it
+* can give variables without give the value
+* can have constructors.
+
+### Difference between an abstract class and Interface
+
+ * can implement many interfaces but can extend only one class
+ * you can declare any fields for interface but have to be instantiated `public static final`
+ * can declare any fields without instantiate in abstract class
+
+## Method Overriding
+
+* allows a subclass to provide a specific implementation for a method in a superclass 
+* should have the same name, return type and parameters
+* `@Override` annotation used to indicate an override method
+* Benefits:
+*
+      * Runtime Polymorphism
+      * code reusasbility by allowing subclasses to use the behaviour of methods form superclass
+
+
