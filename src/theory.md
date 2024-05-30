@@ -190,14 +190,29 @@ Key concepts:
 * Inheritance
      * allows to create new classes that inherit properties and methods from existing classes
      * code re-usability 
+     * a class can inherit only from one superclass
+     * `extends` keyword is used to establish an inheritance relationship
+     * `@Override` provide an implementation of a method that is already defined
+     * `super` keyword used to call a superclass constructor or access methods and fields
+     * access control: `private`, `protected`, `public`
 * Encapsulation
-     * all the variables are inside a method/class
+     * all the variables and methods are inside a class
      * use getters and setters
-     * hide implementation from the outside world
+     * hide implementation details of objects from the outside world
      * use access control `private` or `public`
 * Polymorphism 
      * object from different classes respond differently to the same method
+     * multiple methods have the same name but different parameters
+     * `add()` method can have 2, 3, ... parameters 
      * `drow()` method can be implemented differently for a `Circle` object and a `Square`
+     * specific implementation of a method that is already defined in its superclass
+     * _doing the same thing in different ways_
 
 * Abstraction
      * hiding complex implementation and showing only the necessary features of an object
+
+## Access control
+
+* <span style="color: violet;">private</span>: not accessible directly in the subclass
+* <span style="color: violet;">protected</span>: accessible within the same package and by subclasses
+* <span style="color: violet;">public</span>: accessible from any other class
