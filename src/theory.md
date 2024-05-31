@@ -24,6 +24,12 @@ what do manifest file does
   * [<span style="color: green;">Object-Oriented Programming (OOP)</span>](#span-stylecolor-greenobject-oriented-programming-oopspan)
   * [Access control](#access-control)
   * [Interface](#interface-)
+    * [Abstract Methods](#abstract-methods)
+    * [Reference Type](#reference-type)
+    * [Abstract classes](#abstract-classes)
+    * [Difference between an abstract class and Interface](#difference-between-an-abstract-class-and-interface)
+  * [Method Overriding](#method-overriding)
+  * [`super` keyword](#super-keyword)
 <!-- TOC -->
 
 ## JVM (_Java Virtual Machine_)
