@@ -268,4 +268,8 @@ Key concepts:
       * Runtime Polymorphism
       * code reusasbility by allowing subclasses to use the behaviour of methods form superclass
 
+## `super` keyword
 
+* refer to the immediate parent class
+* can access superclass methods, constructors, and variables
+* differentiate between a superclass method and a subclass method
