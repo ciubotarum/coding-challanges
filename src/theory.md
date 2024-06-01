@@ -30,6 +30,7 @@ what do manifest file does
     * [Difference between an abstract class and Interface](#difference-between-an-abstract-class-and-interface)
   * [Method Overriding](#method-overriding)
   * [`super` keyword](#super-keyword)
+  * [`static`](#static)
 <!-- TOC -->
 
 ## JVM (_Java Virtual Machine_)
@@ -279,3 +280,8 @@ Key concepts:
 * refer to the immediate parent class
 * can access superclass methods, constructors, and variables
 * differentiate between a superclass method and a subclass method
+
+## `static`
+
+* a particular member (variable, method, nested class) belongs to class itself
+* can call static methods without creating an instance of a class `MyClass.s taticVar`
