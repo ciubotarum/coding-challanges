@@ -31,6 +31,8 @@ what do manifest file does
   * [Method Overriding](#method-overriding)
   * [`super` keyword](#super-keyword)
   * [`static`](#static)
+  * [Exception Handling](#exception-handling)
+    * [Exceptions](#exceptions)
 <!-- TOC -->
 
 ## JVM (_Java Virtual Machine_)
@@ -284,4 +286,25 @@ Key concepts:
 ## `static`
 
 * a particular member (variable, method, nested class) belongs to class itself
-* can call static methods without creating an instance of a class `MyClass.s taticVar`
+* can call static methods without creating an instance of a class `MyClass.staticVar`
+
+## Exception Handling
+
+Definition:
+
+* mechanism to handle runtime errors 
+* keywords for handling exceptions
+     * `try` - block contains the code that might throw an exception
+     * `catch` - block handles the exception, follows after a `try`, can have as many as we want
+     * `finally`
+     * `throw`
+     * `trows`
+
+### Exceptions
+
+* events that disrupt the normal flow of a program
+* an object that represents an error during the execution of the program
+     * dividing by zero
+     * accessing an array index out of bonds
+     * opening a file that doesn't exist
+
