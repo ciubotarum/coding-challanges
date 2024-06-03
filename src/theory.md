@@ -296,7 +296,7 @@ Definition:
 * keywords for handling exceptions
      * `try` - block contains the code that might throw an exception
      * `catch` - block handles the exception, follows after a `try`, can have as many as we want
-     * `finally`
+     * `finally` - executed regardless of whether an exception was thrown or caught 
      * `throw`
      * `trows`
 
@@ -307,4 +307,13 @@ Definition:
      * dividing by zero
      * accessing an array index out of bonds
      * opening a file that doesn't exist
-
+* Types:
+*
+      * checked exceptions: exceptions checked at compile-time 
+           * caught or declared with keyword `throws`
+           * `IOException`, `SQLException`
+      * unchecked exceptions: occur at runtime
+           * `RuntimeException`
+           * `ArithmeticException`, `NullPointerException`, `ArrayIndexOutOfBoundsException`
+      * errors: serious problems that should not try to catch
+           * `OutOfMemoryError`, `stackOverflowError`
