@@ -297,8 +297,9 @@ Definition:
      * `try` - block contains the code that might throw an exception
      * `catch` - block handles the exception, follows after a `try`, can have as many as we want
      * `finally` - executed regardless of whether an exception was thrown or caught 
-     * `throw`
-     * `trows`
+     * `throw` - throw an exception from a method or block of code
+     * `trows` - throw an exception from the method declaration 
+        * <span style="color: red;">can't use on a class</span>
 
 ### Exceptions
 
@@ -310,10 +311,29 @@ Definition:
 * Types:
 *
       * checked exceptions: exceptions checked at compile-time 
+           * subclasses of `Exception` 
+           * must be declared in the method signature
            * caught or declared with keyword `throws`
            * `IOException`, `SQLException`
       * unchecked exceptions: occur at runtime
-           * `RuntimeException`
+           * subclasses of `RuntimeException`
+           * do not need to be declaser in the method signature
            * `ArithmeticException`, `NullPointerException`, `ArrayIndexOutOfBoundsException`
       * errors: serious problems that should not try to catch
            * `OutOfMemoryError`, `stackOverflowError`
+* <span style="color: violet;">method signature</span>
+*     * includes method's name and the parameter list
+
+#### IOException
+
+Definition:
+* checked exception
+* I/O (input/output) operation has failed or interrupted
+* class of exceptions
+* Subclasses
+   * `FileNotFoundException`: failed to open a file
+   * `EOFException`: unexpectedly reached the end of a file or stream 
+   * etc
+
+
+
