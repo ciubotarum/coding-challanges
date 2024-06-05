@@ -317,7 +317,7 @@ Definition:
            * `IOException`, `SQLException`
       * unchecked exceptions: occur at runtime
            * subclasses of `RuntimeException`
-           * do not need to be declaser in the method signature
+           * do not need to be declared in the method signature
            * `ArithmeticException`, `NullPointerException`, `ArrayIndexOutOfBoundsException`
       * errors: serious problems that should not try to catch
            * `OutOfMemoryError`, `stackOverflowError`
@@ -330,10 +330,57 @@ Definition:
 * checked exception
 * I/O (input/output) operation has failed or interrupted
 * class of exceptions
+* network issues
 * Subclasses
    * `FileNotFoundException`: failed to open a file
    * `EOFException`: unexpectedly reached the end of a file or stream 
    * etc
 
+#### SQLException 
 
+Definition:
+* checked exception
+* signals a database access error
 
+## JDBC (_Java Database Connectivity_)
+
+Definition:
+* API that enables Java applications to interact with databases
+   * connecting to a database using a specific server
+   * executing SQL statements on the database
+
+## API (_Application Programming Interface_)
+
+Definition: 
+* connects apps together 
+* intermediary between different software components
+* provide a set of definitions and protocol that allows applications to communicate
+* Examples:
+   * Web API: communication over the internet using HTTP and REST
+   * Google Maps API
+   * for uber one app calculate your payment, another show your current location ...
+
+### String API
+
+Definition:
+* set of classes and methods that provide functionality to work with strings
+* comparing, extracting, searching, modifying ...
+
+## "String", "StringBuilder", and "StringBuffer"
+
+Definition:
+* used to deal with strings
+* _String_: 
+   * immutable object (once created it can't be modified)
+   * any attempt to change will create a new object
+   * thread-safe (correct behaviour) can be accessed my multiple threads without changing the behaviour
+   * **used in cases where data shouldn't be accidentally modified**
+* _StringBuilder_
+   * mutable class
+   * is not thread-safe
+   * allows to modify and manipulate string objects
+   * **when need to perform multiple appends, inserts, ... operations**
+* _StringBuffer_
+   * mutable, similar to string builder
+   * is thread-safe
+   * **have multiple threads to modify the same string**
