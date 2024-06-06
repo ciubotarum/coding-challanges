@@ -33,6 +33,15 @@ what do manifest file does
   * [`static`](#static)
   * [Exception Handling](#exception-handling)
     * [Exceptions](#exceptions)
+      * [IOException](#ioexception)
+      * [SQLException](#sqlexception-)
+  * [JDBC (_Java Database Connectivity_)](#jdbc-_java-database-connectivity_)
+  * [API (_Application Programming Interface_)](#api-_application-programming-interface_)
+    * [String API](#string-api)
+  * ["String", "StringBuilder", and "StringBuffer"](#string-stringbuilder-and-stringbuffer)
+  * [Immutable Object](#immutable-object)
+  * [Wrapper classes](#wrapper-classes)
+    * [Autoboxing and Unboxing](#autoboxing-and-unboxing)
 <!-- TOC -->
 
 ## JVM (_Java Virtual Machine_)
@@ -366,6 +375,55 @@ Definition:
 * set of classes and methods that provide functionality to work with strings
 * comparing, extracting, searching, modifying ...
 
+### Collections API
+
+Definition:
+* set of classes and interfaces that provide algorithms for working with collections of obj.
+* includes a variety of data structures like:
+   * lists
+   * sets
+   * maps
+
+Main Collections Interface
+#### `Collection` Interface
+* we can sort, search and manipulate data within this collections
+   * `add()`
+   * `remove()`
+   * `size()`
+   * `contains()`
+
+#### `List` Interface
+* ordered collection
+* allows duplicate elements 
+* provides positional access
+* Types:
+   * `ArrayList`
+   * `LinkedList`
+   * `Vector`
+
+#### `Set` Interface
+* does not allow duplicate elements
+* Types:
+   * `HashSet`
+   * `LinkedHashSet`
+   * `TreeSet`
+
+#### `Queue` Interface
+* hold elements in FIFO order
+* Types:
+   * `LinkedList`
+   * `PriorityQueue`
+   * `ArrayDeque`
+
+#### `Map` Interface
+* objects that maps keys to values
+* no duplicate allowed
+* Types:
+   * `HashMap`
+   * `TreeMap`
+   * `LinkedHashMap`
+   * `HashTable`
+
 ## "String", "StringBuilder", and "StringBuffer"
 
 Definition:
@@ -384,3 +442,49 @@ Definition:
    * mutable, similar to string builder
    * is thread-safe
    * **have multiple threads to modify the same string**
+* <span style="color: violet;">thread-safe</span>: an object have correct behaviour even after was accessed multiple times
+
+## Immutable Object
+
+Definition:
+
+* an object whose state cannot be modified after it is created
+* thread-safe
+* have no methods to be modified
+* fields/classes a declared with `final` to ensure that the values cannot be changed
+* Examples:
+   * `String`
+   * `Integer`
+   * `Boolean`
+   * `Double`
+
+## Wrapper classes
+
+Definition:
+
+* encapsulate primitive data types into an object
+* use primitives data types (`char`, `int`, `boolean`) as objects
+* Examples:
+   * `byte` -> `Byte`
+   * `short` -> `Short`
+   * `int` -> `Integer`
+   * `char` -> `Character` ect.
+
+Why use it:
+
+* allow collections (`ArrayList`, `HashMap`) to word with data types
+* wrapper classes can be `null` useful to represent the absence of the value
+
+### Autoboxing and Unboxing
+
+Definition:
+
+* mechanisms that allow automatic conversion between primitive types and their wrapper classes
+
+<span style="color: violet;">Autoboxing</span>:
+* convert primitive types to wrapper classes
+* `int` to `Integer`
+
+<span style="color: violet;">Unboxing</span>:
+* convert wrapper classes to primitive types
+* `Integer` to `int`
