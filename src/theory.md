@@ -49,6 +49,8 @@ what do manifest file does
   * [Wrapper classes](#wrapper-classes)
     * [Autoboxing and Unboxing](#autoboxing-and-unboxing)
   * [Generics](#generics)
+  * ["Iterator" Interface](#iterator-interface)
+    * [Difference between "Iterator" and "ListIterator"](#difference-between-iterator-and-listiterator)
 <!-- TOC -->
 
 ## JVM (_Java Virtual Machine_)
@@ -584,4 +586,26 @@ How to use:
   * `List<Integer> intList = new ArrayList<>()` - when use it
   * `private static void printList(List<? extends Animal> myList) {}`
 
+## "Iterator" Interface
 
+Definition:
+* interface that provides a standard way to traverse the elements of a collection sequentially
+* can iterate over the elements and safely removing during iteration
+* `public interface Iterator<E> {
+  boolean hasNext();
+  E next();
+  void remove();
+  }`
+* `boolean hasNext();` - returns true if the iteration have more elements
+* `E next();` - returns the next element in the iteration (`NoSuchElementException` if no more el.)
+* `void remove()` - remove the last element returned by the iterator
+
+### Difference between "Iterator" and "ListIterator"
+
+* Both are used for traversing collections
+* Iterator Interface:
+  * allows forward-only traversal of a collection
+  * can be used to traverse list, sets, and queues
+* listIterator Interface:
+  * bidirectional traversal of lists
+  * access the current index
