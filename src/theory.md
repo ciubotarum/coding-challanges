@@ -48,6 +48,7 @@ what do manifest file does
   * [Immutable Object](#immutable-object)
   * [Wrapper classes](#wrapper-classes)
     * [Autoboxing and Unboxing](#autoboxing-and-unboxing)
+  * [Generics](#generics)
 <!-- TOC -->
 
 ## JVM (_Java Virtual Machine_)
@@ -556,4 +557,31 @@ Definition:
 <span style="color: violet;">Unboxing</span>:
 * convert wrapper classes to primitive types
 * `Integer` to `int`
+
+## Generics
+
+Definition:
+* language feature that allows classes, ... to operate on types specified by programmer at compile-time
+* can write flexible and reusable code
+* can define classes, interfaces and methods
+* reduces the need for type casting and runtime errors
+* <span style="color: red;">don't work with primitive types</span>
+
+How to use:
+* `public class Printer <T>` (instead of T tou can use whatever you want)
+* `Printer<Integer> printer = new Printer<>(23);`
+* we can make it work only with certain classes and their extensions/interfaces
+  * `public class Printer <T extends Animal>`
+  * `public class Printer <T extends Animal & Serializable>`
+      * supports only one class and one interface
+      * first have to be the class
+* for methods
+  * `private static <T> void shout (T thingToShout){}` 
+  * `private static <T, V> void shout (T thingToShout, V otherThing){}`
+  * `private static <T> T void shout (T thingToShout){}`- to return a T type
+* Wildcard - for list of different objects
+  * `private static void printList(List<?> myList) {}`
+  * `List<Integer> intList = new ArrayList<>()` - when use it
+  * `private static void printList(List<? extends Animal> myList) {}`
+
 
