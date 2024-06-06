@@ -38,6 +38,12 @@ what do manifest file does
   * [JDBC (_Java Database Connectivity_)](#jdbc-_java-database-connectivity_)
   * [API (_Application Programming Interface_)](#api-_application-programming-interface_)
     * [String API](#string-api)
+    * [Collections API](#collections-api)
+      * [`Collection` Interface](#collection-interface)
+      * [`List` Interface](#list-interface)
+      * [`Set` Interface](#set-interface)
+      * [`Queue` Interface](#queue-interface)
+      * [`Map` Interface](#map-interface)
   * ["String", "StringBuilder", and "StringBuffer"](#string-stringbuilder-and-stringbuffer)
   * [Immutable Object](#immutable-object)
   * [Wrapper classes](#wrapper-classes)
@@ -393,36 +399,98 @@ Main Collections Interface
    * `contains()`
 
 #### `List` Interface
-* ordered collection
-* allows duplicate elements 
+
+Definition:
+* ordered collection - elements have a specific position
 * provides positional access
-* Types:
-   * `ArrayList`
-   * `LinkedList`
-   * `Vector`
+* allows the storage and manipulation of elements
+* can contain duplicate elements
+* `List` interface is a part of Java Collections Framework
+* lists can grow and shrink dynamically
+
+Common implementations:
+* `ArrayList`
+  * resizable
+  * fast random access of the elements
+  * suitable for frequent insertion or deletion
+  * `List<String> arrayList = new ArrayList<>();`
+  * `arrayList.add("Apple");`, `String fruit = arrayList.get(1);`, `arrayList.remove(2);`
+* `LinkedList`
+  * an implementation of the `List` and `Deque` interfaces
+  * better performance for insertion or deletion
+  * slower random access
+  * suitable for frequent insertion and deletion
+  * `List<String> linkedList = new LinkedList<>();`
+  * `linkedList.add("Dog");`, `String animal = linkedList.get(2);`, `linkedList.remove(0);`
+* `Vector`
+  * synchronized resizable array implementation of the `List` interface
+  * similar to `ArrayList` but thread-safe
+  * when required thread-safety
+  * `List<String> vector = new Vector<>();`
+  * `vector.add("Red");`, `String color = vector.get(1);`, `vector.remove(2);`
+* `Stack`
+  * subclass of `Vector` that implements LIFO
+  * suitable for LIFO operations
+  * `Stack<String> stack = new Stack<>();`
+  * `stack.push("First");`, `String top = stack.pop();`
 
 #### `Set` Interface
 * does not allow duplicate elements
-* Types:
-   * `HashSet`
-   * `LinkedHashSet`
-   * `TreeSet`
+* no guaranteed order
+* extends the `Collection` interface
+* used to manage unique elements
+* efficient for checking the presence of elements, adding, removing
+
+Common implementations:
+* `HashSet`
+  * not guarantee the order will remain constant over time
+  * suitable for fast access with no order
+  * `Set<String> hashSet = new HashSet<>();`
+  * `hashSet.add("Apple");`
+* `LinkedHashSet`
+  * the order is maintained according to their insertion order
+  * suitable for fast access and predictable iteration order
+  * `Set<String> linkedHashSet = new LinkedHashSet<>();`
+  * `linkedHashSet.add("Apple");`
+* `TreeSet`
+  * elements are ordered naturally or by a Comparator provided
+  * suitable when need sorted set
+  * `Set<String> treeSet = new TreeSet<>();`
+  * `treeSet.add("Banana");`
 
 #### `Queue` Interface
 * hold elements in FIFO order
-* Types:
-   * `LinkedList`
-   * `PriorityQueue`
-   * `ArrayDeque`
+* extends the `Collection` interface
+* not allow null elements
+* have methods for inserting, deleting, inspecting etc.
+
+Common implementations:
+* `LinkedList`
+* `PriorityQueue`
+  * elements are ordered naturally or by a comparator
+  * suitable for priority-based order
+  * `Queue<Integer> priorityQueue = new PriorityQueue<>();`
+  * `priorityQueue.add(5);`, `Integer element = priorityQueue.poll();`
+* `ArrayDeque`
+  * resizable array
+  * used as a FIFO queue or LIFO stack
+  * high-performance implementations of queues and stacks
+  * `Queue<String> arrayDeque = new ArrayDeque<>();`
+  * `arrayDeque.add("First");`, `String element = arrayDeque.poll();`
 
 #### `Map` Interface
 * objects that maps keys to values
 * no duplicate allowed
-* Types:
-   * `HashMap`
-   * `TreeMap`
-   * `LinkedHashMap`
-   * `HashTable`
+* have methods for adding, removing and manipulating key-value pairs
+
+Common implementations:
+* `HashMap`
+  * suitable for `get` and `put` methods
+  * `Map<String, Integer> hashMap = new HashMap<>();`
+  * `hashMap.put("Apple", 10);`, `int appleCount = hashMap.get("Apple");`
+* `TreeMap`
+* `LinkedHashMap`
+* `HashTable`
 
 ## "String", "StringBuilder", and "StringBuffer"
 
@@ -488,3 +556,4 @@ Definition:
 <span style="color: violet;">Unboxing</span>:
 * convert wrapper classes to primitive types
 * `Integer` to `int`
+
