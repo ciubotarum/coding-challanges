@@ -44,6 +44,7 @@ what do manifest file does
       * [`Set` Interface](#set-interface)
       * [`Queue` Interface](#queue-interface)
       * [`Map` Interface](#map-interface)
+    * [Stream API](#stream-api)
   * ["String", "StringBuilder", and "StringBuffer"](#string-stringbuilder-and-stringbuffer)
   * [Immutable Object](#immutable-object)
   * [Wrapper classes](#wrapper-classes)
@@ -482,8 +483,10 @@ Common implementations:
   * `arrayDeque.add("First");`, `String element = arrayDeque.poll();`
 
 #### `Map` Interface
-* objects that maps keys to values
-* no duplicate allowed
+* an object that maps the keys to values
+* not have an order
+* keys are unique and map only one value
+* if a duplicate key is added, the new value will replace the old value
 * have methods for adding, removing and manipulating key-value pairs
 
 Common implementations:
@@ -492,8 +495,49 @@ Common implementations:
   * `Map<String, Integer> hashMap = new HashMap<>();`
   * `hashMap.put("Apple", 10);`, `int appleCount = hashMap.get("Apple");`
 * `TreeMap`
+  * stores the key value in a sorted order or comparator
 * `LinkedHashMap`
 * `HashTable`
+
+### Stream API
+
+Definition:
+* a feature/abstraction for processing sequences of elements
+* gives a set of functions that we can perform on data structures
+* it allows filtering, mapping and reducing
+* can be used to process collections of objects
+* Creating a stream from a collection:
+  * `List<String> list = Arrays.asList("Apple", "Banana", "Cherry");`
+  * `Stream<String> streamFromList = list.stream();`
+* Creating a stream from an array:
+   * `String[] array = {"Apple", "Banana", "Cherry"};`
+   * `Stream<String> streamFromArray = Arrays.stream(array);`
+* Creating a stream using `Stream.of()`:
+  * `Stream<String> streamOf = Stream.of("Apple", "Banana", "Cherry");` 
+
+Intermediate Operations:
+* **filter**: Filters elements based on a predicate.
+* **map**: Transforms each element using a function.
+* **flatMap**: Flattens nested structures.
+* **sorted**: Sorts the elements.
+* **distinct**: Removes duplicate elements.
+* **limit**: Limits the number of elements.
+* **skip**: Skips the first n elements.
+
+Terminal Operations:
+* **forEach**: Performs an action for each element.
+* **collect**: Collects the elements into a collection.
+* **reduce**: Reduces the elements to a single value.
+* **count**: Counts the number of elements.
+* **findFirst**: Finds the first element.
+* **findAny**: Finds any element (useful in parallel streams).
+* **allMatch**, **anyMatch**, **noneMatch**: Match elements based on a predicate.
+
+What is the difference between 'map' and 'flatMap' in Streams?
+* both are used to transform elements in a stream
+* `map` applies a function for each element of the stream and returns a single element
+* `flatMap` returns a stream for each element, and you want to flatten into a single stream
+* used especially for lists of lists
 
 ## "String", "StringBuilder", and "StringBuffer"
 
@@ -609,3 +653,5 @@ Definition:
 * listIterator Interface:
   * bidirectional traversal of lists
   * access the current index
+
+
