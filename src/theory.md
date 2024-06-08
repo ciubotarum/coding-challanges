@@ -361,13 +361,6 @@ Definition:
 * checked exception
 * signals a database access error
 
-## JDBC (_Java Database Connectivity_)
-
-Definition:
-* API that enables Java applications to interact with databases
-   * connecting to a database using a specific server
-   * executing SQL statements on the database
-
 ## API (_Application Programming Interface_)
 
 Definition: 
@@ -378,6 +371,15 @@ Definition:
    * Web API: communication over the internet using HTTP and REST
    * Google Maps API
    * for uber one app calculate your payment, another show your current location ...
+
+### JDBC (_Java Database Connectivity_)
+
+Definition:
+* API that enables Java applications to interact with databases
+  * connecting to a database using a specific server
+  * executing SQL statements on the database
+* `connection = DriverManager.getConnection(url, user, password);` - connect to db
+* to handle exceptions for db use try() - catch() with `SQLException`
 
 ### String API
 
