@@ -35,8 +35,8 @@ what do manifest file does
     * [Exceptions](#exceptions)
       * [IOException](#ioexception)
       * [SQLException](#sqlexception-)
-  * [JDBC (_Java Database Connectivity_)](#jdbc-_java-database-connectivity_)
   * [API (_Application Programming Interface_)](#api-_application-programming-interface_)
+    * [JDBC (_Java Database Connectivity_)](#jdbc-_java-database-connectivity_)
     * [String API](#string-api)
     * [Collections API](#collections-api)
       * [`Collection` Interface](#collection-interface)
@@ -52,6 +52,9 @@ what do manifest file does
   * [Generics](#generics)
   * ["Iterator" Interface](#iterator-interface)
     * [Difference between "Iterator" and "ListIterator"](#difference-between-iterator-and-listiterator)
+  * [Singleton Class](#singleton-class)
+* [To do:](#to-do)
+  * [Optional](#optional)
 <!-- TOC -->
 
 ## JVM (_Java Virtual Machine_)
@@ -616,7 +619,7 @@ Definition:
 * <span style="color: red;">don't work with primitive types</span>
 
 How to use:
-* `public class Printer <T>` (instead of T tou can use whatever you want)
+* `public class Printer <T>` (instead of T you can use whatever you want)
 * `Printer<Integer> printer = new Printer<>(23);`
 * we can make it work only with certain classes and their extensions/interfaces
   * `public class Printer <T extends Animal>`
@@ -656,4 +659,33 @@ Definition:
   * bidirectional traversal of lists
   * access the current index
 
+## Singleton Class
 
+Definition:
+* a class that ensures to have only one instance
+* provides a global point of access to the instance
+
+When to use:
+* Database connection pooling
+* logging 
+* configuration settings
+
+# To do:
+* learn Optionals 
+* design patterns
+   * types of patterns (arhitectural....)
+   * 3 at least to learn (the most used)
+* solid
+   * SRP 
+
+## Optional
+
+Definition:
+* a container object
+* used as a method return type for "no result" to represent 
+* and where using `null` is likely to cause errors
+
+Creating instances:
+* `Optional<String> nonEmptyOptional = Optional.of("Hello");` - Throws NullPointerException if argument is null
+* `Optional<String> nullableOptional = Optional.ofNullable(null);` - Can hold null
+* `Optional<String> emptyOptional = Optional.empty();` - Empty Optional
