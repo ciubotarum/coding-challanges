@@ -1,3 +1,4 @@
+package theory.examples;
 public class Singleton {
     private static Singleton instance;
 
