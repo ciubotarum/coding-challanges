@@ -55,6 +55,10 @@ what do manifest file does
   * [Singleton Class](#singleton-class)
 * [To do:](#to-do)
   * [Optional](#optional)
+  * [Design patterns](#design-patterns)
+    * [Creational Patterns](#creational-patterns)
+    * [Structural Patterns](#structural-patterns)
+    * [Behavioral Patterns](#behavioral-patterns)
 <!-- TOC -->
 
 ## JVM (_Java Virtual Machine_)
@@ -670,14 +674,6 @@ When to use:
 * logging 
 * configuration settings
 
-# To do:
-* learn Optionals 
-* design patterns
-   * types of patterns (arhitectural....)
-   * 3 at least to learn (the most used)
-* solid
-   * SRP 
-
 ## Optional
 
 Definition:
@@ -689,3 +685,48 @@ Creating instances:
 * `Optional<String> nonEmptyOptional = Optional.of("Hello");` - Throws NullPointerException if argument is null
 * `Optional<String> nullableOptional = Optional.ofNullable(null);` - Can hold null
 * `Optional<String> emptyOptional = Optional.empty();` - Empty Optional
+
+## Design patterns
+
+Definition:
+* standard solutions to common problems
+* templates for how to solve a problem in various situation
+
+Types:
+* Creational Patterns
+* Structural Patterns
+* Behavioral Patterns
+
+### Creational Patterns
+
+Definition:
+* deal with object creation mechanisms
+* create abjects in a manner suitable to the situation
+* different ways to create objects
+* Examples:
+   * Singleton: a class have only one instance
+
+### Structural Patterns
+
+Definition:
+* deal with object composition or the way objects are structured
+* help to ensure if one part of teh system is change the rest is not affected
+* relationships between the objects
+* Examples:
+   * Adapter: allows incompatible interfaces to work together
+
+### Behavioral Patterns
+
+Definition:
+* deal with objects collaboration and the assignment of responsibilities between objects
+* interactions or communications between objects
+* Examples:
+   * Strategy: defines algorithms, encapsulate and make them interchangeable
+
+
+# To do:
+* design patterns
+  * types of patterns (arhitectural....)
+  * 3 at least to learn (the most used)
+* solid
+  * SRP 
