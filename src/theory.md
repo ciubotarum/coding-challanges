@@ -52,13 +52,16 @@ what do manifest file does
   * [Generics](#generics)
   * ["Iterator" Interface](#iterator-interface)
     * [Difference between "Iterator" and "ListIterator"](#difference-between-iterator-and-listiterator)
-  * [Singleton Class](#singleton-class)
-* [To do:](#to-do)
   * [Optional](#optional)
   * [Design patterns](#design-patterns)
     * [Creational Patterns](#creational-patterns)
+      * [Singleton Pattern](#singleton-pattern)
+      * [Dependency Injection _(DI)_](#dependency-injection-_di_)
+        * [Inversion of Control _(IoC)_](#inversion-of-control-_ioc_)
+      * [Factory Method Pattern](#factory-method-pattern)
     * [Structural Patterns](#structural-patterns)
     * [Behavioral Patterns](#behavioral-patterns)
+* [To do:](#to-do)
 <!-- TOC -->
 
 ## JVM (_Java Virtual Machine_)
@@ -716,8 +719,26 @@ Disadvantages:
 * Dependency Injection
 * Factory Patterns
 
-#### Dependency Injection
+#### Dependency Injection _(DI)_
+Definition:
+* a design pattern used to implement Inversion of Control (IoC) between classes and their dependencies
+* help creates more maintainable and testable code
+* it's not categorized as a Creational Design Pattern, but it's closely related
 
+_Dependencies_: objects that a class needs to function
+
+_Injection_: the process of providing the required dependencies to a class
+
+Types of Dependency Injection:
+* **Constructor Injection**: dependencies are provided through a class constructor
+* **Setter Injection**: dep. are provided through setter methods
+* **Field Injection**: dep. are injected directly into the fields of a class
+
+##### Inversion of Control _(IoC)_
+Definition:
+* design principle in which the control of object creation and the flow of the program is inverted
+* the control is given to a container framework (Spring)
+* make the code easier to maintain and to test
 
 #### Factory Method Pattern
 * this pattern defines an interface for creating an object
