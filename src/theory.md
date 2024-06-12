@@ -663,17 +663,6 @@ Definition:
   * bidirectional traversal of lists
   * access the current index
 
-## Singleton Class
-
-Definition:
-* a class that ensures to have only one instance
-* provides a global point of access to the instance
-
-When to use:
-* Database connection pooling
-* logging 
-* configuration settings
-
 ## Optional
 
 Definition:
@@ -703,8 +692,36 @@ Definition:
 * deal with object creation mechanisms
 * create abjects in a manner suitable to the situation
 * different ways to create objects
-* Examples:
-   * Singleton: a class have only one instance
+
+**Examples:**
+#### Singleton Pattern
+Definition:
+* a class that ensures to have only one instance
+* provides a global point of access to the instance
+
+When to use:
+* Database connection pooling
+* logging
+* configuration settings
+
+Example:
+* to manage a printer connection might be implemented as a Singleton. This avoids multiple
+programs trying to print simultaneously
+
+Disadvantages:
+* can make testing and code maintainability more challenging
+* limited flexibility
+
+**Alternatives:**
+* Dependency Injection
+* Factory Patterns
+
+#### Dependency Injection
+
+
+#### Factory Method Pattern
+* this pattern defines an interface for creating an object
+* allows the subclasses to alter the type of objects that will be created
 
 ### Structural Patterns
 
