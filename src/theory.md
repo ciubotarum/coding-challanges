@@ -741,8 +741,18 @@ Definition:
 * make the code easier to maintain and to test
 
 #### Factory Method Pattern
-* this pattern defines an interface for creating an object
+* this pattern defines an interface/abstract class for creating an object
 * allows the subclasses to alter the type of objects that will be created
+* delegates the instantiation to subclasses, which implements the factory method to create objects
+* creating product objects without specifying their concrete classes
+
+Benefits:
+* clients are decoupled from the specific classes they instantiate
+* new types of products can be introduced without modifying existing code
+
+When use it:
+* a class cannot predict the type of objects it needs to create
+* a class wants its subclasses to specify the objects it creates
 
 ### Structural Patterns
 
