@@ -771,9 +771,12 @@ Definition:
 
 #### Bridge Pattern
 * decouples an abstraction from its implementation so that the two can vary independently
+* interface/abstract class which acts as a bridge, making the functionality of concrete classes
+  independent from interface implementer classes
 
 #### Decorator Pattern
 * allows behaviour to be added to individual objects, without affecting the behaviour of other objects
+
 
 ### Behavioral Patterns
 
