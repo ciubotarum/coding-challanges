@@ -60,6 +60,9 @@ what do manifest file does
         * [Inversion of Control _(IoC)_](#inversion-of-control-_ioc_)
       * [Factory Method Pattern](#factory-method-pattern)
     * [Structural Patterns](#structural-patterns)
+      * [Adapter Pattern](#adapter-pattern)
+      * [Bridge Pattern](#bridge-pattern)
+      * [Decorator Pattern](#decorator-pattern)
     * [Behavioral Patterns](#behavioral-patterns)
 * [To do:](#to-do)
 <!-- TOC -->
@@ -758,10 +761,19 @@ When use it:
 
 Definition:
 * deal with object composition or the way objects are structured
-* help to ensure if one part of teh system is change the rest is not affected
+* help to ensure if one part of the system is changed, the rest is not affected
 * relationships between the objects
-* Examples:
-   * Adapter: allows incompatible interfaces to work together
+
+**Examples:**
+#### Adapter Pattern
+* allows objects with incompatible interfaces to work together by converting one interface to another
+* a translator for two systems that naturally don't speak the same language
+
+#### Bridge Pattern
+* decouples an abstraction from its implementation so that the two can vary independently
+
+#### Decorator Pattern
+* allows behaviour to be added to individual objects, without affecting the behaviour of other objects
 
 ### Behavioral Patterns
 
