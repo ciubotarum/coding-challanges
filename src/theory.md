@@ -776,6 +776,8 @@ Definition:
 
 #### Decorator Pattern
 * allows behaviour to be added to individual objects, without affecting the behaviour of other objects
+* this pattern creates a decorator class which wraps the original class and provides additional
+functionality while keeping the class methods signature intact
 
 
 ### Behavioral Patterns
@@ -783,7 +785,8 @@ Definition:
 Definition:
 * deal with objects collaboration and the assignment of responsibilities between objects
 * interactions or communications between objects
-* Examples:
+
+**Examples:**
    * Strategy: defines algorithms, encapsulate and make them interchangeable
 
 
