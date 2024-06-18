@@ -63,7 +63,10 @@ what do manifest file does
       * [Adapter Pattern](#adapter-pattern)
       * [Bridge Pattern](#bridge-pattern)
       * [Decorator Pattern](#decorator-pattern)
-    * [Behavioral Patterns](#behavioral-patterns)
+    * [Behavioral Pattern](#behavioral-pattern)
+      * [theory.examples.Strategy Pattern](#theoryexamplesstrategy-pattern)
+      * [Observer Pattern](#observer-pattern)
+      * [Command Pattern](#command-pattern)
 * [To do:](#to-do)
 <!-- TOC -->
 
@@ -780,14 +783,24 @@ Definition:
 functionality while keeping the class methods signature intact
 
 
-### Behavioral Patterns
+### Behavioral Pattern
 
 Definition:
 * deal with objects collaboration and the assignment of responsibilities between objects
 * interactions or communications between objects
 
 **Examples:**
-   * Strategy: defines algorithms, encapsulate and make them interchangeable
+#### theory.examples.Strategy Pattern
+* defines algorithms, encapsulate and make them interchangeable
+* the algorithm vary independently from clients that use it
+
+#### Observer Pattern
+* defines a ne-to-many dependency between objects
+* when one object changes state, all its dependents are notified and updated automatically
+
+#### Command Pattern
+* encapsulates a request as an object letting you parameterize clients with different requests,
+queue or log requests, and support undoable operations
 
 
 # To do:
