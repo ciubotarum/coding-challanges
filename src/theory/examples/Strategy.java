@@ -1,77 +1,77 @@
 package theory.examples;
 
-import java.util.ArrayList;
-
 public class Strategy {
-    // theory.examples.Strategy Interface
-    public static interface PaymentStrategy {
-        void pay(int amount);
+    // Strategy Interface
+    public static interface WeaponStrategy {
+        void useWeapon();
     }
 
-    // Concrete theory.examples.Strategy
-    public static class CreditCardPayment implements PaymentStrategy {
-        private String cardNumber;
-
-        public CreditCardPayment(String cardNumber) {
-            this.cardNumber = cardNumber;
-        }
-
+    // Concrete Strategy for Sword
+    public static class SwordStrategy implements WeaponStrategy {
         @Override
-        public void pay(int amount) {
-            System.out.println(amount + " paid with credit card: " + cardNumber);
+        public void useWeapon() {
+            System.out.println("Swinging a sword!");
         }
     }
 
-    // Concrete theory.examples.Strategy
-    public static class PayPalPayment implements PaymentStrategy {
-        private String email;
-
-        public PayPalPayment(String email) {
-            this.email = email;
-        }
-
+    // Concrete Strategy for Bow and Arrow
+    public static class BowAndArrowStrategy implements WeaponStrategy {
         @Override
-        public void pay(int amount) {
-            System.out.println(amount + " paid using PayPal: " + email);
+        public void useWeapon() {
+            System.out.println("Shooting an arrow!");
+        }
+    }
+
+    // Concrete Strategy for Knife
+    public static class KnifeStrategy implements WeaponStrategy {
+        @Override
+        public void useWeapon() {
+            System.out.println("Stabbing with a knife!");
         }
     }
 
     // Context
-    public static class ShoppingCart {
-        private List<Item> items;
-        private PaymentStrategy paymentStrategy;
+    public static class GameCharacter {
+        private WeaponStrategy weaponStrategy;
 
-        public ShoppingCart() {
-            this.items = new ArrayList<>();
+        // Set the strategy (weapon) at runtime
+        public void setWeaponStrategy(WeaponStrategy weaponStrategy) {
+            this.weaponStrategy = weaponStrategy;
         }
 
-        public void addItem(Item item) {
-            items.add(item);
-        }
-
-        public void setPaymentStrategy(PaymentStrategy paymentStrategy) {
-            this.paymentStrategy = paymentStrategy;
-        }
-
-        public void checkout() {
-            int amount = items.stream().mapToInt(Item::getPrice).sum();
-            paymentStrategy.pay(amount);
+        // Use the current strategy (weapon)
+        public void fight() {
+            if (weaponStrategy != null) {
+                weaponStrategy.useWeapon();
+            } else {
+                System.out.println("No weapon selected!");
+            }
         }
     }
 
-    // Usage
-    public static class Client {
+    public static class Main {
         public static void main(String[] args) {
-            ShoppingCart cart = new ShoppingCart();
-            cart.addItem(new Item("Laptop", 1000));
-            cart.addItem(new Item("Phone", 500));
+            GameCharacter character = new GameCharacter();
 
-            cart.setPaymentStrategy(new CreditCardPayment("1234-5678-9101-1121"));
-            cart.checkout();
+            // Use Sword
+            character.setWeaponStrategy(new SwordStrategy());
+            character.fight();
 
-            cart.setPaymentStrategy(new PayPalPayment("user@example.com"));
-            cart.checkout();
+            // Use Bow and Arrow
+            character.setWeaponStrategy(new BowAndArrowStrategy());
+            character.fight();
+
+            // Use Knife
+            character.setWeaponStrategy(new KnifeStrategy());
+            character.fight();
+
+            // No weapon selected
+            character.setWeaponStrategy(null);
+            character.fight();
         }
     }
+
+
+
 
 }
