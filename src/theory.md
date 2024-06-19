@@ -802,8 +802,16 @@ How to use it:
 * use a strategy to perform an action
 
 #### Observer Pattern
-* defines a ne-to-many dependency between objects
+* defines a one-to-many dependency between objects
 * when one object changes state, all its dependents are notified and updated automatically
+* "helps to reflect all changes done an object to all who depends on them"
+
+How to use it:
+* weather station that can be observed by different display units
+* define methods for attaching and detaching observers
+* defines an update method for observers to implement
+* implements the subject interface and notifies observers of changes
+* implements the observer interface and updates their state based on subject changes
 
 #### Command Pattern
 * encapsulates a request as an object letting you parameterize clients with different requests,
