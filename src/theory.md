@@ -790,9 +790,16 @@ Definition:
 * interactions or communications between objects
 
 **Examples:**
-#### theory.examples.Strategy Pattern
-* defines algorithms, encapsulate and make them interchangeable
+#### Strategy Pattern
+* defines algorithms, encapsulate and make them interchangeable (one can be used instead of another)
 * the algorithm vary independently from clients that use it
+* change the behaviour of an object at runtime
+
+How to use it:
+* A game character that can use different weapons
+* defines the interface for the various strategies
+* implement the strategy interface for different types of weapons
+* use a strategy to perform an action
 
 #### Observer Pattern
 * defines a ne-to-many dependency between objects
