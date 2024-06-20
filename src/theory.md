@@ -72,7 +72,7 @@ what do manifest file does
     * [Open/Closed Principle _(OCP)_](#openclosed-principle-_ocp_)
     * [Liskov Substitution Principle _(LSP)_](#liskov-substitution-principle-_lsp_)
     * [Interface Segregation Principle _(ISP)_](#interface-segregation-principle-_isp_)
-* [To do:](#to-do)
+    * [Dependency Inversion Principle (DIP)](#dependency-inversion-principle-dip)
 <!-- TOC -->
 
 ## JVM (_Java Virtual Machine_)
@@ -864,6 +864,9 @@ usable the same way without causing errors
 * split large interfaces into smaller
 * many specific interfaces are better than a general interface
 
-# To do:
-* solid
-  * SRP 
+### Dependency Inversion Principle (DIP)
+* high-level modules should not depend on low-level modules
+* both should depend on abstractions
+* abstractions should not depend on details
+* details should depend on abstraction
+* we must depend on abstractions and not concrete classes
