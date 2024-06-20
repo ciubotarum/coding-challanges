@@ -69,6 +69,7 @@ what do manifest file does
       * [Command Pattern](#command-pattern)
   * [SOLID](#solid)
     * [Single Responsibility Principle _(SRP)_](#single-responsibility-principle-_srp_)
+    * [Open/Closed Principle (OCP)](#openclosed-principle-ocp)
 * [To do:](#to-do)
 <!-- TOC -->
 
@@ -843,7 +844,11 @@ Definition:
 
 ### Single Responsibility Principle _(SRP)_
 * a class should have only one reason to change
-* it should have only one job
+* it should have only one job/responsibility 
+
+### Open/Closed Principle (OCP)
+* classes, functions should be open for extension but closed for modification
+* able to extend a class behaviour without modifying it
 
 # To do:
 * solid
