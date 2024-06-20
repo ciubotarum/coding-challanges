@@ -64,7 +64,7 @@ what do manifest file does
       * [Bridge Pattern](#bridge-pattern)
       * [Decorator Pattern](#decorator-pattern)
     * [Behavioral Pattern](#behavioral-pattern)
-      * [theory.examples.Strategy Pattern](#theoryexamplesstrategy-pattern)
+      * [Strategy Pattern](#strategy-pattern)
       * [Observer Pattern](#observer-pattern)
       * [Command Pattern](#command-pattern)
 * [To do:](#to-do)
@@ -727,7 +727,8 @@ Disadvantages:
 
 #### Dependency Injection _(DI)_
 Definition:
-* a design pattern used to implement Inversion of Control (IoC) between classes and their dependencies
+* a design pattern used to implement Inversion of Control (IoC) between classes and 
+their dependencies
 * help creates more maintainable and testable code
 * it's not categorized as a Creational Design Pattern, but it's closely related
 
@@ -742,14 +743,16 @@ Types of Dependency Injection:
 
 ##### Inversion of Control _(IoC)_
 Definition:
-* design principle in which the control of object creation and the flow of the program is inverted
+* design principle in which the control of object creation and the flow of the program is 
+inverted
 * the control is given to a container framework (Spring)
 * make the code easier to maintain and to test
 
 #### Factory Method Pattern
 * this pattern defines an interface/abstract class for creating an object
 * allows the subclasses to alter the type of objects that will be created
-* delegates the instantiation to subclasses, which implements the factory method to create objects
+* delegates the instantiation to subclasses, which implements the factory method to create
+objects
 * creating product objects without specifying their concrete classes
 
 Benefits:
@@ -759,6 +762,7 @@ Benefits:
 When use it:
 * a class cannot predict the type of objects it needs to create
 * a class wants its subclasses to specify the objects it creates
+* 
 
 ### Structural Patterns
 
@@ -769,7 +773,8 @@ Definition:
 
 **Examples:**
 #### Adapter Pattern
-* allows objects with incompatible interfaces to work together by converting one interface to another
+* allows objects with incompatible interfaces to work together by converting one interface to 
+another
 * a translator for two systems that naturally don't speak the same language
 
 #### Bridge Pattern
@@ -817,10 +822,14 @@ How to use it:
 * encapsulates a request as an object letting you parameterize clients with different requests,
 queue or log requests, and support undoable operations
 
+How to use it:
+* create a command interface for all commands (with an execute method)
+* create concrete command classes with actions to be executed (LightOn, LightOff)
+* create a receiver class with the logic to perform the actions (turning teh light on/off)
+* invoker class stores a command and invokes the command's `execute` method when its button 
+is pressed
+* creates instances of the receiver
 
 # To do:
-* design patterns
-  * types of patterns (arhitectural....)
-  * 3 at least to learn (the most used)
 * solid
   * SRP 
