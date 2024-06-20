@@ -69,7 +69,8 @@ what do manifest file does
       * [Command Pattern](#command-pattern)
   * [SOLID](#solid)
     * [Single Responsibility Principle _(SRP)_](#single-responsibility-principle-_srp_)
-    * [Open/Closed Principle (OCP)](#openclosed-principle-ocp)
+    * [Open/Closed Principle _(OCP)_](#openclosed-principle-_ocp_)
+    * [Liskov Substitution Principle _(LSP)_](#liskov-substitution-principle-_lsp_)
 * [To do:](#to-do)
 <!-- TOC -->
 
@@ -846,9 +847,16 @@ Definition:
 * a class should have only one reason to change
 * it should have only one job/responsibility 
 
-### Open/Closed Principle (OCP)
+### Open/Closed Principle _(OCP)_
 * classes, functions should be open for extension but closed for modification
 * able to extend a class behaviour without modifying it
+
+### Liskov Substitution Principle _(LSP)_
+* object from a superclass should be replaceable with objects of a subclass without affecting the
+correctness of the program
+* subtypes should be replaceable by their base types
+* if you have a program that written to work with a class, any it's subclasses should be 
+usable the same way without causing errors
 
 # To do:
 * solid
