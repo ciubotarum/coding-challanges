@@ -67,6 +67,8 @@ what do manifest file does
       * [Strategy Pattern](#strategy-pattern)
       * [Observer Pattern](#observer-pattern)
       * [Command Pattern](#command-pattern)
+  * [SOLID](#solid)
+    * [Single Responsibility Principle _(SRP)_](#single-responsibility-principle-_srp_)
 * [To do:](#to-do)
 <!-- TOC -->
 
@@ -829,6 +831,19 @@ How to use it:
 * invoker class stores a command and invokes the command's `execute` method when its button 
 is pressed
 * creates instances of the receiver
+
+## SOLID
+Definition:
+* an acronym for five design principles to make software design more understandable, reusable
+  1. Single Responsibility Principle (SRP)
+  2. Open/Closed Principle (OCP)
+  3. Liskov Substitution Principle (LSP)
+  4. Interface Segregation Principle (ISP)
+  5. Dependency Inversion Principle (DIP)
+
+### Single Responsibility Principle _(SRP)_
+* a class should have only one reason to change
+* it should have only one job
 
 # To do:
 * solid
