@@ -71,6 +71,7 @@ what do manifest file does
     * [Single Responsibility Principle _(SRP)_](#single-responsibility-principle-_srp_)
     * [Open/Closed Principle _(OCP)_](#openclosed-principle-_ocp_)
     * [Liskov Substitution Principle _(LSP)_](#liskov-substitution-principle-_lsp_)
+    * [Interface Segregation Principle _(ISP)_](#interface-segregation-principle-_isp_)
 * [To do:](#to-do)
 <!-- TOC -->
 
@@ -857,6 +858,11 @@ correctness of the program
 * subtypes should be replaceable by their base types
 * if you have a program that written to work with a class, any it's subclasses should be 
 usable the same way without causing errors
+
+### Interface Segregation Principle _(ISP)_
+* clients should not be forced  to depend on interfaces they do not use
+* split large interfaces into smaller
+* many specific interfaces are better than a general interface
 
 # To do:
 * solid
