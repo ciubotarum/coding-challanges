@@ -73,6 +73,8 @@ what do manifest file does
     * [Liskov Substitution Principle _(LSP)_](#liskov-substitution-principle-_lsp_)
     * [Interface Segregation Principle _(ISP)_](#interface-segregation-principle-_isp_)
     * [Dependency Inversion Principle (DIP)](#dependency-inversion-principle-dip)
+  * [Maven](#maven)
+    * [Manifest file](#manifest-file)
 <!-- TOC -->
 
 ## JVM (_Java Virtual Machine_)
@@ -872,7 +874,7 @@ usable the same way without causing errors
 * we must depend on abstractions and not concrete classes
 
 Example:
-* we have a store and we want to have a pay method
+* we have a store, and we want to have a pay method
 * an intermediary class help to have more methods for payment (Stripe API, PayPal API)
 
 ## Maven
@@ -882,7 +884,19 @@ Definition:
 * simplifies the process of managing project dependencies, building and packaging your project
 into various format (including JAR - Java ARchive file)
 
+
+
 Create JAR with maven:
 * in Java project create a `pom.xml` file
 * in contains information about the project 
 * configuration details used by Maven to build the project 
+
+### Manifest file
+
+* a file named `MANIFEST.MF`
+* text file included within a JAR
+* it acts as an instruction manual for the JAR
+
+How are used manifest files:
+* when run an executable JAR file JVM reads the manifest file to understand the JAR structure
+* Maven and Gradle can automatically generate and configure the manifest file
