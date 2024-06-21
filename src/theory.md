@@ -870,3 +870,19 @@ usable the same way without causing errors
 * abstractions should not depend on details
 * details should depend on abstraction
 * we must depend on abstractions and not concrete classes
+
+Example:
+* we have a store and we want to have a pay method
+* an intermediary class help to have more methods for payment (Stripe API, PayPal API)
+
+## Maven
+
+Definition:
+* a build automation tool used for java projects
+* simplifies the process of managing project dependencies, building and packaging your project
+into various format (including JAR - Java ARchive file)
+
+Create JAR with maven:
+* in Java project create a `pom.xml` file
+* in contains information about the project 
+* configuration details used by Maven to build the project 
