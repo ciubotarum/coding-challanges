@@ -1,8 +1,7 @@
 # Java
 
-To do:
-how maven creates a jar
-what do manifest file does
+# To do:
+* how to use the logger in Java
 
 <!-- TOC -->
 * [Java](#java)
@@ -74,13 +73,17 @@ what do manifest file does
     * [Interface Segregation Principle _(ISP)_](#interface-segregation-principle-_isp_)
     * [Dependency Inversion Principle (DIP)](#dependency-inversion-principle-dip)
   * [Maven](#maven)
+    * [JAR file](#jar-file)
     * [Manifest file](#manifest-file)
+  * [Garbage Collection](#garbage-collection)
 <!-- TOC -->
 
 ## JVM (_Java Virtual Machine_)
 
 Definition:
+* a component of Java
 * program that enable a computer to run Java programs
+* transform java bytecode into instructions for operating system
 * core component of JRE
 
 Alternatives:
@@ -206,6 +209,9 @@ Definition:
 Definition:
 * initialization routine for your objects
 * put the initial parameters
+* special method to instantiate the object of a class
+* don't have return type 
+* can be override
 
 ## Overloading
 
@@ -253,6 +259,7 @@ Key concepts:
      * use getters and setters
      * hide implementation details of objects from the outside world
      * use access control `private` or `public`
+     * restrict direct access to some components of an object
 * Polymorphism 
      * object from different classes respond differently to the same method
      * multiple methods have the same name but different parameters
@@ -260,6 +267,7 @@ Key concepts:
      * `drow()` method can be implemented differently for a `Circle` object and a `Square`
      * specific implementation of a method that is already defined in its superclass
      * _doing the same thing in different ways_
+     * utilized by overloading and overriding
 
 * Abstraction
      * hiding complex implementation and showing only the necessary features of an object
@@ -884,7 +892,9 @@ Definition:
 * simplifies the process of managing project dependencies, building and packaging your project
 into various format (including JAR - Java ARchive file)
 
-
+### JAR file
+* a package format file used to aggregate many Java class files into one 
+* built on the ZIP file format and have `.jar` file extension
 
 Create JAR with maven:
 * in Java project create a `pom.xml` file
@@ -900,3 +910,10 @@ Create JAR with maven:
 How are used manifest files:
 * when run an executable JAR file JVM reads the manifest file to understand the JAR structure
 * Maven and Gradle can automatically generate and configure the manifest file
+
+## Garbage Collection
+
+Definition:
+* automated process that manages memory allocation and deallocation for objects created during
+program execution
+* efficient memory usage
