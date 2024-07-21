@@ -37,24 +37,62 @@ public class CureCancer {
 //    cellscellscellscodecodecells
 
     public static int[] mutationLocation(char[][] body) {
-        // Loop through each row
-        for (int row = 0; row < body.length - 2; row++) {
-            // Loop through each column in the current row
-            for (int column = 0; column < body[row].length; column++) {
 
-                if (body[0][column] != body[1][column] && body[row][column] != body[2][column]) {
-                    // Return the location of the mutation
-                    return new int[]{0 , column};
-                } else if (body[row][column] != body[row + 1][column]) {
-                    return new int[]{row + 1, column};
+        // My code
+//        for (int column = 0; column < body[0].length; column++) {
+//            for (int row = 0; row < body.length - 2; row++) {
+//
+//                if (body[0][column] != body[1][column] && body[row][column] != body[2][column]) {
+//                    return new int[]{0 , column};
+//                } else if (body[row][column] != body[row + 1][column]) {
+//                    return new int[]{row + 1, column};
+//                } else if (body[body.length - 1][column] != body[0][column]) {
+//                    return new int[]{body.length - 1, column};
+//                }
+//
+//            }
+//        }
+//        // If no mutation is found, return an empty array
+//        return new int[]{};
+
+        // code to pass the time limit test
+
+        int rows = body.length;
+        int cols = body[0].length;
+
+        // Compare first two rows with the last row to determine the majority row
+        char[] referenceRow;
+        if (compareRows(body[0], body[1]) || compareRows(body[0], body[rows - 1])) {
+            referenceRow = body[0];
+        } else {
+            referenceRow = body[1];
+        }
+
+        // Find the row that does not match the reference row
+        for (int row = 0; row < rows; row++) {
+            if (!compareRows(body[row], referenceRow)) {
+                // Find the exact column where the mutation is
+                for (int col = 0; col < cols; col++) {
+                    if (body[row][col] != referenceRow[col]) {
+                        return new int[]{row, col};
+                    }
                 }
-
             }
         }
-        // If no mutation is found, return an empty array
-        return new int[]{};
 
+        return new int[]{};
     }
+
+    // Helper method to compare two rows
+    private static boolean compareRows(char[] row1, char[] row2) {
+        for (int i = 0; i < row1.length; i++) {
+            if (row1[i] != row2[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 
     public static class SolutionTest {
         @Test
