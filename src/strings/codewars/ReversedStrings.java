@@ -1,4 +1,4 @@
-package strings;
+package strings.codewars;
 
 public class ReversedStrings {
 //    Complete the solution so that it reverses the string passed into it.

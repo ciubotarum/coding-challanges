@@ -1,4 +1,4 @@
-package strings;
+package strings.codewars;
 
 public class SmashWords {
 //    Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. You can ignore any need to sanitize words or add punctuation,

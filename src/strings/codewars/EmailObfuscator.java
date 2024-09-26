@@ -1,4 +1,4 @@
-package strings;
+package strings.codewars;
 
 import static org.junit.Assert.*;
 import org.junit.Test;

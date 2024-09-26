@@ -1,4 +1,4 @@
-package strings;
+package strings.codewars;
 
 public class Bio {
 //    Deoxyribonucleic acid, DNA is the primary information storage molecule in biological systems. It is composed of

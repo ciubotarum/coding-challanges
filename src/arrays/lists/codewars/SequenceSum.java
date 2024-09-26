@@ -1,4 +1,4 @@
-package arrays.lists;
+package arrays.lists.codewars;
 
 import org.junit.Test;
 import org.junit.experimental.runners.Enclosed;

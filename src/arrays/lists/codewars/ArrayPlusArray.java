@@ -1,4 +1,4 @@
-package arrays.lists;
+package arrays.lists.codewars;
 
 public class ArrayPlusArray {
     public static int arrayPlusArray(int[] arr1, int[] arr2) {

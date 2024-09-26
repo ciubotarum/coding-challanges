@@ -1,4 +1,4 @@
-package strings;
+package strings.codewars;
 
 import org.junit.Test;
 import org.junit.experimental.runners.Enclosed;

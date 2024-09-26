@@ -1,4 +1,4 @@
-package arrays.lists;
+package arrays.lists.codewars;
 
 import java.util.Arrays;
 
